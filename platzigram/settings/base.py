@@ -20,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'Peralson77'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -86,13 +87,25 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.getenv('DB_NAME'),
-        "USER": os.getenv('DB_USER'),
-        "PASSWORD": os.getenv('DB_PASSWORD'),
-        "HOST": os.getenv('DB_HOST'),
-        "PORT": os.getenv('DB_PORT'),
+        "NAME": 'platzigram',
+        "USER": 'peralson',
+        "PASSWORD": 'Peralson77',
+        "HOST": '5432',
+        "PORT": 'localhost',
     }
 }
+
+
+# export SECRET_KEY = "Peralson77"
+
+# export DB_NAME = 'platzigram'
+# export DB_USER = 'peralson'
+# export DB_PASSWORD = 'Peralson77'
+# export DB_PORT = '5432'
+# export DB_HOST = 'localhost'
+
+# export DJANGO_SETTINGS_MODULE = 'platzigram.settings.prod'
+
 
 
 # Password validation
